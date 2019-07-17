@@ -5,32 +5,6 @@
       "description": "It delegates default Chrome's tab switching behaviour to the extension of your choice (eg. Popup Tab Switcher, CLUT, .etc)",
       "manipulators": [
         {
-          "type": "basic",
-          "from": {
-            "key_code": "left_shift",
-            "modifiers": {
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_shift",
-              "lazy": true
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "com.google.Chrome"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
           "from": {
             "key_code": "tab",
             "modifiers": {
@@ -57,10 +31,35 @@
                 "com.google.Chrome"
               ]
             }
-          ]
+          ],
+          "type": "basic"
         },
         {
-          "type": "basic",
+          "from": {
+            "key_code": "left_shift",
+            "modifiers": {
+              "optional": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_shift",
+              "lazy": true
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.google.Chrome"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
           "from": {
             "key_code": "escape",
             "modifiers": {
@@ -87,7 +86,8 @@
                 "com.google.Chrome"
               ]
             }
-          ]
+          ],
+          "type": "basic"
         }
       ]
     }
