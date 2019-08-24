@@ -4,11 +4,12 @@
 <plist>
     <dict>
         <key>Label</key>
-        <string>local.job.restartKeyboardMaestro</string>
+        <string>local.mute_volume</string>
         <key>ProgramArguments</key>
         <array>
             <string>/usr/bin/osascript</string>
-            <string>~/Library/LaunchAgents/local.job.openIBooksInFullScreen.scpt</string>
+            <string>-e</string>
+            <string>set Volume 0</string>
         </array>
         <key>RunAtLoad</key>
         <false/>
@@ -20,8 +21,8 @@
             <integer>0</integer>
         </dict>
         <key>StandardErrorPath</key>
-        <string>/tmp/restartKeyboardMaestro.err</string>
+        <string>/tmp/mute_volume.err</string>
         <key>StandardOutPath</key>
-        <string>/tmp/restartKeyboardMaestro.out</string>
+        <string>/tmp/mute_volume.out</string>
     </dict>
 </plist>

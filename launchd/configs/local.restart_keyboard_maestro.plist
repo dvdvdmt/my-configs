@@ -4,12 +4,12 @@
 <plist>
     <dict>
         <key>Label</key>
-        <string>local.job.systemVolume</string>
+        <string>local.restart_keyboard_maestro</string>
         <key>ProgramArguments</key>
         <array>
-            <string>/usr/bin/osascript</string>
-            <string>-e</string>
-            <string>set Volume 0</string>
+            <string>/usr/local/bin/bash</string>
+            <string>-c</string>
+            <string>osascript ~/Library/LaunchAgents/local.restart_keyboard_maestro.scpt</string>
         </array>
         <key>RunAtLoad</key>
         <false/>
@@ -20,5 +20,9 @@
             <key>Minute</key>
             <integer>0</integer>
         </dict>
+        <key>StandardErrorPath</key>
+        <string>/tmp/restart_keyboard_maestro.err</string>
+        <key>StandardOutPath</key>
+        <string>/tmp/restart_keyboard_maestro.out</string>
     </dict>
 </plist>
