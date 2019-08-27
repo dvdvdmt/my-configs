@@ -4,12 +4,12 @@
 <plist>
     <dict>
         <key>Label</key>
-        <string>local.open_ibooks</string>
+        <string>local.open_book</string>
         <key>ProgramArguments</key>
         <array>
             <string>/usr/local/bin/bash</string>
             <string>-c</string>
-            <string>osascript ~/Library/LaunchAgents/local.open_ibooks.scpt</string>
+            <string>osascript ~/Library/LaunchAgents/local.open_book.scpt</string>
         </array>
         <key>RunAtLoad</key>
         <false/>
@@ -21,8 +21,8 @@
             <integer>0</integer>
         </dict>
         <key>StandardErrorPath</key>
-        <string>/tmp/open_ibooks.err</string>
+        <string>/tmp/open_book.err</string>
         <key>StandardOutPath</key>
-        <string>/tmp/open_ibooks.out</string>
+        <string>/tmp/open_book.out</string>
     </dict>
 </plist>
